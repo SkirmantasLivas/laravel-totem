@@ -91,18 +91,18 @@ class Totem
     /**
      * @return bool
      */
-    public static function baseTableExists(): bool
-    {
-        if (Cache::get('totem.table.'.TOTEM_TABLE_PREFIX.'tasks')) {
-            return true;
-        }
+//     public static function baseTableExists(): bool
+//     {
+//         if (Cache::get('totem.table.'.TOTEM_TABLE_PREFIX.'tasks')) {
+//             return true;
+//         }
 
-        if (Schema::hasTable(TOTEM_TABLE_PREFIX.'tasks')) {
-            Cache::forever('totem.table.'.TOTEM_TABLE_PREFIX.'tasks', true);
+//         if (Schema::hasTable(TOTEM_TABLE_PREFIX.'tasks')) {
+//             Cache::forever('totem.table.'.TOTEM_TABLE_PREFIX.'tasks', true);
 
-            return true;
-        }
+//             return true;
+//         }
 
-        return false;
-    }
+//         return false;
+//     }
 }
